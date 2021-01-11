@@ -24,7 +24,7 @@ public class Teleport {
     }
 
     public void sendRequestMessage() {
-        TextComponent title = new TextComponent(sender.getDisplayName() + " has send you a teleportation request.");
+        TextComponent title = new TextComponent(sender.getDisplayName() + " has sent you a teleportation request.");
 
         TextComponent accept = new TextComponent("[ACCEPT]");
         accept.setBold(true);
@@ -40,11 +40,6 @@ public class Teleport {
         deny.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tpadeny " + id));
         accept.addExtra(deny);
 
-//        target.sendRawMessage(String.format(
-//                "[\"\",{\"text\":\"%s has sent you a teleportation request.\\n\"},{\"text\":\"[ACCEPT]\",\"bold\":true" +
-//                ",\"color\":\"dark_green\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tpaaccept %s\"}} " +
-//                ",{\"text\":\" \"},{\"text\":\"[DENY]\",\"bold\":true,\"color\":\"dark_red\",\"clickEvent\":" +
-//                "{\"action\":\"run_command\",\"value\":\"/tpadeny %s\"}}]", sender.getDisplayName(), id, id));
         target.sendMessage(title);
         target.sendMessage(accept);
     }
@@ -72,6 +67,6 @@ public class Teleport {
 
     public void deny() {
         TeleportPlugin.REQUEST_MAP.remove(this.id);
-        sender.sendRawMessage("Your teleportation request has been denied.");
+        sender.sendRawMessage("Your teleportation request to " + target.getDisplayName() + " has been denied.");
     }
 }
