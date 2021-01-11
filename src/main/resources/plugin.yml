@@ -1,0 +1,8 @@
+name: leTeleport
+version: ${project.version}
+main: com.github.dskprt.teleport.TeleportPlugin
+api-version: 1.16
+prefix: leTeleport
+authors: [ dskprt ]
+description: you can teleport to other players with this plugin wow amazing!
+website: https://github.com/dskprt/teleport
