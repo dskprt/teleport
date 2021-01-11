@@ -6,3 +6,11 @@ prefix: leTeleport
 authors: [ dskprt ]
 description: you can teleport to other players with this plugin wow amazing!
 website: https://github.com/dskprt/teleport
+commands:
+  tpa:
+    description: teleport to other players
+    usage: /tpa <player>
+  tpadeny:
+    usage: /tpadeny <id>
+  tpaaccept:
+    usage: /tpaaccept <id>
